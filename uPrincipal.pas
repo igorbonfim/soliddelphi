@@ -8,24 +8,25 @@ uses
 
 type
 
-  TArquivo = class
-    procedure GerarArquivo; virtual; abstract;
+  iArquivo = interface
+    ['{8B6348F6-4F50-4629-A116-32A3C3F24F1B}']
+    procedure GerarArquivo;
   end;
 
-  TArquivoWord = class(TArquivo)
-    procedure GerarArquivo; override;
+  TArquivoTXT = class(TInterfacedObject, iArquivo)
+    procedure GerarArquivo;
   end;
 
-  TArquivoPDF = class(TArquivo)
-    procedure GerarArquivo; override;
+  TArquivoWord = class(TArquivoTXT)
+    procedure GerarArquivo;
   end;
 
-  TArquivoXML = class(TArquivo)
-    procedure GerarArquivo; override;
+  TArquivoPDF = class(TArquivoTXT)
+    procedure GerarArquivo;
   end;
 
-  TArquivoTXT = class(TArquivo)
-    procedure GerarArquivo; override;
+  TArquivoXML = class(TArquivoTXT)
+    procedure GerarArquivo;
   end;
 
   TForm2 = class(TForm)
@@ -67,14 +68,10 @@ end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 var
-  Arquivo: TArquivoWord;
+  Arquivo: iArquivo;
 begin
   Arquivo := TArquivoWord.Create;
-  try
-    Arquivo.GerarArquivo;
-  finally
-    Arquivo.Free;
-  end;
+  Arquivo.GerarArquivo;
 end;
 
 { TArquivoTXT }
