@@ -7,7 +7,6 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-
   iArquivo = interface
     ['{8B6348F6-4F50-4629-A116-32A3C3F24F1B}']
     procedure GerarArquivo;
