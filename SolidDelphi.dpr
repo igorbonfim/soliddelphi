@@ -2,7 +2,8 @@ program SolidDelphi;
 
 uses
   Vcl.Forms,
-  uPrincipal in 'uPrincipal.pas' {Form2};
+  uPrincipal in 'uPrincipal.pas' {Form2},
+  uExemploISP in 'uExemploISP.pas';
 
 {$R *.res}
 

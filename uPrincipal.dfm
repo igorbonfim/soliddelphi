@@ -12,12 +12,30 @@ object Form2: TForm2
   Font.Style = []
   TextHeight = 15
   object Button1: TButton
-    Left = 264
-    Top = 160
-    Width = 75
+    Left = 208
+    Top = 88
+    Width = 129
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Exemplo arquivos'
     TabOrder = 0
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 208
+    Top = 119
+    Width = 129
+    Height = 25
+    Caption = 'Exemplo dispositivos 1'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 208
+    Top = 150
+    Width = 129
+    Height = 25
+    Caption = 'Exemplo dispositivos 2'
+    TabOrder = 2
+    OnClick = Button3Click
   end
 end
